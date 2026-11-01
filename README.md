@@ -6,5 +6,7 @@
 
 | 技能 | 用途 |
 | --- | --- |
-| multipublish-tuwen | 图文多平台发布（B站 / X / 小红书 / 抖音 / 公众号草稿） |
-| multipublish-video | VideoPilot 成片多平台发布（B站 / 小红书 / 抖音 / YouTube） |
+| multipublish-tuwen | 图文多平台发布（B站 / X / 小红书 / 抖音），不含公众号和视频 |
+| multipublish-video | 成片多平台上传发布（B站 / 小红书 / 抖音 / YouTube），不做剪辑 |
+| project-map | 用户全部代码项目分布、远程仓库与 Mac 本地仓库对照，以及改代码/合并/推送流程 |
+| video-production | 从选题、脚本、剪辑、导出到封面的视频制作，不负责发布 |
