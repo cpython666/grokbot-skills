@@ -46,6 +46,10 @@ A finished video (usually `~/Movies/剪映导出/<完整标题>/`) needs upload/
 - **抖音**: horizontal cover 4:3, vertical 3:4. Schedule `input[placeholder="日期和时间"]`, window 2 h–14 days. "检测人数过多" = busy, not penalty. Evidence: 发布成功 + 内容管理.
 - **YouTube**: 安排时间 collapsed under 公开范围; time via `tp-yt-paper-input`. Scheduling before upload/processing finishes may only save a draft; verify final 预定 receipt + same-ID record. Verify thumbnail via `i9.ytimg.com/vi_webp/<id>/mqdefault`. Don't re-encode to speed upload.
 - **视频号** (only when named): new space often needs user QR login. Fields inside wujie shadow DOM. Short title ≤ 16 chars; a comma was rejected once (use space). Cover editable only after upload completes. 视频标注 → 无需标注.
+  - Description limit 1000 chars: if 发布文案 is longer, 发表 silently does nothing. Trim chapters/要点, keep intro + disclaimer + sources/footage lines (hashtag line may drop).
+  - video-publisher may stall claiming 「视频仍在上传或处理中」 after upload done; finish 原创/短标题/标注/活动(不参与)/定时 by hand.
+  - **Blank pages (create or 视频管理 list) are usually NOT Clash/proxy.** Diagnosed 2026-11-02 under Clash rule mode + TUN: every WeChat host (`channels.weixin.qq.com`, `res.wx.qq.com`, `astra-web.weixin.qq.com`, `finder.video.qq.com`, `*.wxqcloud.qq.com`, `tpstelemetry.tencent.com`) hit weixin/tencent/qq.com DIRECT rules; curl direct vs via Clash ~same (60–130 ms). On blank runs the wujie sub-app iframe loaded but made zero requests and the page sent `/astra/report-error` → front-end/wujie mount failure on WeChat's side (~2/3 list loads). Fix: hard refresh (Cmd+Shift+R) or reopen the page; retry a few times. `auth/auth_data` normally takes ~2 s (server wait).
+  - To check for real: read Clash `/connections` read-only (external-controller may not answer; the service unix socket does) while the page loads, and look for any 视频号 host on Match/漏网之鱼 or a proxy node. Only then suggest prepend DIRECT lines (candidates: qq.com.cn, qpic.cn, qlogo.cn, myqcloud.com, wechat.com); never edit Clash yourself.
 - **Ego**: a task space can expire after long waits; don't retry/self-claim. When the user says continue, `claimTaskSpace(<spaceId>)` the original space.
 
 ## Hard stops

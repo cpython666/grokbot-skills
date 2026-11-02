@@ -76,11 +76,23 @@ Use real screenshots from the user's Mac (`screencapture -x -o -l <windowID>`); 
 - Check export folder and `~/Pictures/视频封面/` first; 口播 covers fresh per video unless reuse named.
 - Archive to `~/Pictures/视频封面/<标题>-16-9.png` / `-4-3.png` / `-3-4.png`; verify size+hash; never silent overwrite.
 
+## Optional reference style: 比特新语 (ONLY when the user explicitly says to 借鉴/参考 比特新语)
+Not a default. Never apply these unless the user names 比特新语 for that video; otherwise keep the user's own style above. Full teardown: `/workspace/学习/比特心语/拆解.md` (covers in `covers/`).
+- Account: B站「比特新语」(UID 3494362707135250), ~86万粉 in ~1 month from 2026-10-01, broke out on 诺奖周 (tracked fast). Partition 软件应用 + AI 活动话题; states made with Opus; likely subtitles + BGM, no narration.
+- One idea per video, ~2:10–2:45 (max ~3:20); a long list video becomes a series of single-item shorts, long cut kept as 合集.
+- Emotional translation: map the knowledge point to a human feeling; title and closing line land on it. Title pattern 「《片名》｜金句」 or one counter-intuitive sentence; avoid 「16个/盘点」 list words.
+- Covers: near-black background, single glowing gold subject, huge 2- or 4-char serif title, two lines of 金句 with key words in gold, small top series tag; some covers are a single film-subtitle-like line for suspense. If borrowing, adapt to the user's own visual identity rather than cloning the dark-gold look.
+- Hook text on frame 1 (no black fade-in); a turn every 10–15 s; subtitles act as narration: short lines cut to BGM bars.
+- Chase public events (诺奖, astronomy events, science trends) within 24–48 h.
+- 简介: 3–5 short prose lines + AI-made note + current activity topic. Track favorite rate (his hits ~5–7%).
+- Caveats: his timing/platform-support window is not repeatable; emotion must serve verified facts in hard science.
+
 ## Export / delivery
 - `~/Movies/剪映导出/<完整标题>/`; files and 剪映 project named with full title (dup → 「（口播版）」). 合成片: final + covers at folder root, NO `00_最终交付/` (that's only for 口播). Clean wrong old versions after verification.
 - Deliver MP4, covers, editable project, music + asset sources, short report.
 - Repo archive `videos/<date>_<short>/` (README, brief, storyboard, sources, qa-report, retro); update INDEX/preferences/lessons in place. No auto commit/push/publish.
 - 简介 text is drafted for the publisher; one-off credits only when asked that time.
+- 简介 compliance (B站 removed one for 违规推广, 2026-11-02): no URLs, no contact info, no 「详见置顶评论/评论区」 guidance, no filenames that look like domains (e.g. `sources.md` — `.md` is a TLD). Say 「资料来源见片尾」 instead.
 
 ## QA checklist (read logs, not exit codes)
 ffprobe spec/duration (±1 frame); `ffmpeg -xerror` decode; ebur128 on final AAC; black/freeze/silence detect (freeze = clue); ±0.4 s frames at each handoff; reading time ≥ max(2 s, chars/4+0.5); bt709 yuv420p tv-range; first frame composed. Tech pass ≠ visual success; list 未验证项.
