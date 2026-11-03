@@ -56,6 +56,11 @@ Do: one core message → build one visual world/metaphor; each shot = one idea s
 
 ## BGM
 - Original synth (fixed seed) or clearly licensed lyric-free track (log title/author/license/range).
+- Compose a NEW piece for every video (user 2026-11-03: 「直接复用配乐吗？不太好吧，别总想着偷懒」). Never start from a previous video's `music.mjs` / `bgm-synth.mjs` and just change bars or chord tables.
+  - Derive the sound world from the topic: lead timbre tied to on-screen objects, then mode, tempo/groove, motif and sections.
+  - Only low-level tech may be reused (WAV writer, oscillators/envelopes, reverb, mastering).
+  - Compare with the last 3 videos and differ clearly in groove/tempo and lead timbre; don't default to 120 BPM minor cinematic electronic.
+  - The file header states what is new.
 - Must flow naturally (user: 「音乐是不是太跳脱的，没有自然连贯」): continuous motif and harmony, sections evolve, no jumpy switching.
 - References: software 讲解 = bright pop chords + plucked arps + light drums, 100 BPM (approved); AI/励志 = D major 120 BPM cinematic electro-pop; 科普 = D minor 120 BPM. Choose per topic each time.
 - Master 2-pass loudnorm −16 LUFS / −2 dBTP / 48 kHz; re-measure after AAC. Interlude −4~5 dB, not >7.
@@ -77,15 +82,16 @@ Use real screenshots from the user's Mac (`screencapture -x -o -l <windowID>`); 
 - Archive to `~/Pictures/视频封面/<标题>-16-9.png` / `-4-3.png` / `-3-4.png`; verify size+hash; never silent overwrite.
 
 ## Optional reference style: 比特新语 (ONLY when the user explicitly says to 借鉴/参考 比特新语)
-Not a default. Never apply these unless the user names 比特新语 for that video; otherwise keep the user's own style above. Full teardown: `/workspace/学习/比特心语/拆解.md` (covers in `covers/`).
-- Account: B站「比特新语」(UID 3494362707135250), ~86万粉 in ~1 month from 2026-10-01, broke out on 诺奖周 (tracked fast). Partition 软件应用 + AI 活动话题; states made with Opus; likely subtitles + BGM, no narration.
-- One idea per video, ~2:10–2:45 (max ~3:20); a long list video becomes a series of single-item shorts, long cut kept as 合集.
-- Emotional translation: map the knowledge point to a human feeling; title and closing line land on it. Title pattern 「《片名》｜金句」 or one counter-intuitive sentence; avoid 「16个/盘点」 list words.
-- Covers: near-black background, single glowing gold subject, huge 2- or 4-char serif title, two lines of 金句 with key words in gold, small top series tag; some covers are a single film-subtitle-like line for suspense. If borrowing, adapt to the user's own visual identity rather than cloning the dark-gold look.
-- Hook text on frame 1 (no black fade-in); a turn every 10–15 s; subtitles act as narration: short lines cut to BGM bars.
-- Chase public events (诺奖, astronomy events, science trends) within 24–48 h.
-- 简介: 3–5 short prose lines + AI-made note + current activity topic. Track favorite rate (his hits ~5–7%).
-- Caveats: his timing/platform-support window is not repeatable; emotion must serve verified facts in hard science.
+Not a default. Never apply these unless the user names 比特新语 for that video; otherwise keep the user's own style above. Borrow the method, not his dark-gold look, wording or titles. Full teardown (all 23 videos, verified 2026-11-03 via Ego browser + B站 public API, frame/audio analysis of samples): `~/git_pro/VideoPilot/.agents/skills/videopilot/references/style-bitxinyu.md`; raw research data (metadata JSON, covers, frames, sample clips): `~/Documents/VideoPilot调研/比特新语_2026-11-03/`.
+- Account: B站「比特新语」(UID 3494362707135250), 86.8万粉 / 3033万播放 as of 2026-11-03, all 23 videos posted 2026-10-01→11-01; 16 in first 12 days (2–4/day), exploded on 诺奖周 (10-08~11), slowed to one per 2–4 days and views dropped after 10-15. Says made with Opus; 4K since 10-06.
+- Length is a fixed template: 16/23 videos are 160–164 s (≈2:42). In 3 measured videos every hard cut sits on a 112.5 BPM bar line (2.133 s/bar); all turn at 17.07 s = bar 8 → music grid first, then picture (~76 bars).
+- One idea per video: a counter-intuitive formula/experiment → one universal feeling. Best 藏率 (5.7–6.9%): 37法则, 熵增, 剃刀, 我爱你=0 bit, 光遗传. Multi-concept video (《接住》, 7 concepts) was the weakest → split lists into single-item videos.
+- Skeleton: cold open on frame 1 (paradox: 「最狠的程序，输了。最善良的程序，也输了。冠军只有4行代码，一局都没赢过。」 / life scene: 「他三个小时，没回消息。」 / counting-down number) → title card ~bar 8 (big serif CN + tiny spaced EN tag; sometimes "cut out" by an on-screen action, or revealed only at the end) → historical anchor (year, person, paper) → mechanism shown with real data/simulation inside ONE continuous visual world (few hard cuts) → map onto viewer's life (split screens of everyday "差一点") → opening motif returns + closing 金句 + end card with tiny citations.
+- Look/sound: near-black bg, glowing line-art/particles/thin HUD, one recurring motif, accent color per topic (gold/cyan/red-green/pink). No voice at all (spectrum: music + click/whoosh/riser SFX synced to motion). Subtitle = narration: one centered serif line, ~one per 3–4 s, key word colored. Small mono labels; big type only for title, paradox line, key number. Loudness measured −16/−15/−10 LUFS, LRA 3–5.
+- Titles: 「《二到四字片名》｜情感金句」, 片名+公式 (「0.8⁵ = 33%」), or one counter-intuitive statement; 诺奖 = news hook + 「到底是什么」.
+- Covers: mostly a key in-video frame + one serif 金句 with colored key word. Only the 诺奖 trio uses the series template (top-left 「2026 诺贝尔××奖」, big title, single glowing subject, two-line 金句) — that is NOT his general rule.
+- 简介: 3–6 prose lines with concrete sources (year/paper/journal) + activity topic `#vibe知识大赏`. Skip his AI-disclaimer paragraph; use this project's 声明 rules.
+- Audience complaints to avoid: 偷换概念/鸡汤 (formula forced onto feelings), AI文案味 (too many dashes, jumpy lines), same "伪高深" ambient BGM every time, 预制/量产感. Rule: emotion only follows verified facts; metaphor stays labeled as metaphor; few dashes; BGM composed per topic. Check every subtitle line for concept-swapping in QA.
 
 ## Export / delivery
 - `~/Movies/剪映导出/<完整标题>/`; files and 剪映 project named with full title (dup → 「（口播版）」). 合成片: final + covers at folder root, NO `00_最终交付/` (that's only for 口播). Clean wrong old versions after verification.
