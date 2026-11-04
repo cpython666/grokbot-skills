@@ -38,7 +38,8 @@ A finished video (usually `~/Movies/剪映导出/<完整标题>/`) needs upload/
 5. Final branch (when authorized): submit once; on timeout read dialog/list before retrying.
 6. Report per platform honestly: uploaded / draft READY / scheduled (date+time+zone) / under review / public, with receipt evidence.
 7. Resumed batches: find the original draft (title/duration/cover/ID), continue it, never re-upload; verify each video × platform for no duplicates/misses.
-8. Close finished task tabs; keep tabs still uploading or needing review; never close user's other tabs.
+8. **Never navigate an upload/compose tab away** (no goto/reload to check profile, links, duplicates). Open a NEW tab/page in the task space for any check. If a "离开此网站?/Leave site?" beforeunload dialog appears, the agent dismisses it itself (取消/Cancel) immediately; never leave it for the user. Put this rule verbatim in every publishing task brief.
+9. Close finished task tabs; keep tabs still uploading or needing review; never close user's other tabs.
 
 ## Platform gotchas (re-read page; UI changes)
 - **B站**: upload button may not open picker → `setInputFiles` on `input[name=buploader][accept*=".mp4"]`. 分区 single dropdown (e.g. 知识). 4:3 and 16:9 share one image input; confirm selected canvas before upload. Scheduler minutes in 5-min steps. "内容无需标注" + "内容为自制" may coexist; that's normal. Evidence: 稿件投递成功 + 稿件处理 status.
