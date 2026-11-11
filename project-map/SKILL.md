@@ -1,6 +1,8 @@
 ---
 name: project-map
-description: 处理用户任何代码项目任务（改网站/工具页、合并推送、查某项目在哪）前读：用户全部项目的分布、远程仓库与 Mac 本地 ~/git_pro 仓库对照，以及改代码/合并/推送的流程。
+description: >-
+  处理用户任何代码项目任务（改网站/工具页、合并推送、查某项目在哪）前读：用户全部项目的分布、远程仓库与 Mac 本地 ~/git_pro
+  仓库对照，以及改代码/合并/推送的流程。
 ---
 # 项目总览与本地仓库对照
 
@@ -9,19 +11,24 @@ description: 处理用户任何代码项目任务（改网站/工具页、合并
 ## 怎么接项目任务
 1. 先在下方对照表里定位项目：本地目录（用户 Mac 上 `~/git_pro/<目录>`）、远程仓库、默认分支。表里没有的，用 GitHub 工具（list_my_repositories，sort=pushed）查，并把新项目补进本技能。
 2. 改代码交给 Cursor 云端代理（CloudAgent launch，repo 填 https://github.com/<远程仓库>），把需求、截图、验收标准写清楚，让它自己调查和实现，开 PR。
-3. 用户说“合并/推送”时：云端代理开完 PR 后，确认 CI 和预览正常，再让云端代理把 PR 合并进默认分支（注意有的仓库默认分支是 master）。合并即推送上线（例如 cpython666.github.io 由 GitHub Pages 自动部署到 https://cpython666.github.io/）。
+3. 用户说“合并/推送”时：云端代理开完 PR 后，确认 CI 和预览正常，再让云端代理把 PR 合并进默认分支（注意有的仓库默认分支是 master）。合并即推送上线（例如 cpython666.github.io 由 GitHub Pages 自动部署到 https://cpython666.github.io/，StarDreamTech.github.io 同理部署到 https://stardreamtech.github.io/）。
 4. 不在用户 Mac 上克隆或改代码；只在需要核对本地状态时，经用户授权在 Mac 上只读查看 `~/git_pro`（如 `git -C ~/git_pro/<目录> status`）。本地有未推送改动或在非默认分支上时，先告诉用户，不要覆盖。
 5. 合并后提醒用户本地仓库可 `git pull` 同步。
 
 ## 重点项目速查
 - 个人网站「星梦启航」：cpython666/cpython666.github.io（master），本地 ~/git_pro/cpython666.github.io，线上 https://cpython666.github.io/ ，工具页在 /tools/<工具名>/（如 /tools/markdown-image/）。
-- 星笺 Starclip（Rust 剪贴板）：cpython666/starclip；Homebrew 源 cpython666/homebrew-tap。
-- 星镜 Starshot（截图工具）：cpython666/starshot。
-- 星搭子 starbuddy（私有，本地未发现）。
+- 组织主页「星梦科技」：StarDreamTech/StarDreamTech.github.io（main），线上 https://stardreamtech.github.io/ 。Mac 本地尚未克隆。
+- 星笺 Starclip（Rust 剪贴板）：StarDreamTech/starclip（cpython666/starclip 为 fork）；Homebrew 源 StarDreamTech/homebrew-tap，安装 `brew install --cask stardreamtech/tap/starclip`。
+- 星镜 Starshot（截图工具）：StarDreamTech/starshot（cpython666/starshot 为 fork）。
+- 星匣 StarVault（AI 对话档案）：StarDreamTech/starvault（cpython666/starvault 为 fork）。
+- 星哨 StarWatch：StarDreamTech/StarWatch（筹备中；cpython666/StarWatch 为 fork）。
+- 星搭子 starbuddy（2026-11-11 起公开，第 0 期，本地未发现）：StarDreamTech/starbuddy。组织禁用私有 fork，cpython666 下没有副本。
+- 星相 StarPersona（公开，2026-11-11 新建，只有 README）：StarDreamTech/StarPersona，指纹浏览器 / 多账号环境管理器，第一期用现成内核（Camoufox 或魔改 Chromium）只做外层管理器，Windows + macOS。
+- 星盘 StarDash（公开，2026-11-11 新建，只有 README）：StarDreamTech/StarDash，对标 CalmBar（chao-eng/CalmBar）的跨平台菜单栏/托盘状态面板，计划 Tauri，动态 SVG 图标 + 多主题。
 - Grok Bot 共享技能库：cpython666/grokbot-skills（每晚同步到 Mac）。
 - 内容仓库：WechatPilot（公众号）、VideoPilot（视频）、xingxiang（星象视频技能）。
 - 运维：ai-server-ops（私有）；电脑助手 my-computer-assistant（每台电脑一个分支）。
-- StarDream 系列（网站/API/爬虫服务）与 StarDreamTech 组织仓库（StarScout、sd-spider-utils、sd_ctx、starscout-skill）。
+- 其他 StarDreamTech 组织仓库：StarScout、sd-spider-utils、sd_ctx、starscout-skill。
 
 ## 本地仓库对照表（2026-11-01 盘点，按最近推送排序）
 | 本地目录 (~/git_pro/) | 当前分支 | 远程仓库 | 最近推送 | 说明 |
@@ -131,7 +138,10 @@ description: 处理用户任何代码项目任务（改网站/工具页、合并
 ## 只在 GitHub、本地 ~/git_pro 未发现的较新项目
 | 远程仓库 | 默认分支 | 最近推送 | 可见性 | 说明 |
 |---|---|---|---|---|
-| cpython666/starbuddy | main | 2026-10-31 | 私有 | 星搭子：常驻桌面的星芽个人电脑助手，调度本机 Claude Code / Cod |
+| StarDreamTech/StarDreamTech.github.io | main | 2026-11-11 | 公开 | 星梦科技组织主页，GitHub Pages 发布到 https://stardreamtech.github.io/ |
+| StarDreamTech/starbuddy | main | 2026-10-31 | 公开（11-11 起） | 星搭子：常驻桌面的星芽个人电脑助手（已转到组织；第 0 期，公开前不要上组织主页） |
+| StarDreamTech/StarPersona | main | 2026-11-11 | 公开 | 星相：指纹浏览器 / 多账号环境管理器（新建） |
+| StarDreamTech/StarDash | main | 2026-11-11 | 公开 | 星盘：跨平台菜单栏/托盘状态面板（新建，对标 CalmBar） |
 | cpython666/lemo-opuscar | main | 2026-10-22 | 公开 | A toolbox of film styles made in code fo |
 | cpython666/dsh-bili-scroll | main | 2026-10-22 | 公开 | DSH 插件：每天替你刷一轮 B站，读字幕挑出值得的、写一份日报，值得的 @ 你 |
 | cpython666/dsh-purge | master | 2026-10-21 | 公开 | 让 AI 更专注地辅助学习与动手实验 —— DeepSeek Harness 附 |
@@ -148,7 +158,7 @@ description: 处理用户任何代码项目任务（改网站/工具页、合并
 | cpython666/ast_pro | main | 2026-07-01 | 公开 |  |
 | cpython666/auto_trade | master | 2026-07-01 | 公开 |  |
 | cpython666/earn_pro | master | 2026-07-01 | 公开 |  |
-| cpython666/free-stockdb | main | 2026-06-29 | 公开 | 每日更新！免费股票日k、分时k线数据，etf分钟数据，截至到2026-07月最新 |
+| cpython666/free-stockdb | main | 2026-06-29 | 公开 | 每日更新！免费股票日k、分时k线数据，etf分钟数据，截至到 2026-07 月最新 |
 | cpython666/pixel2motion | main | 2026-06-13 | 公开 | AI logo animation skill: turn raster log |
 
 ## 维护
