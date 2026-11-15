@@ -9,5 +9,6 @@
 | craft-anything | 研究已发布软件（程序、安装包、APK、Electron、网页等）的工作原理并复刻自己的版本，用 Craft Anything 工具取证并记录调查过程 |
 | multipublish-tuwen | 图文多平台发布（B站 / X / 小红书 / 抖音），不含公众号和视频 |
 | multipublish-video | 成片多平台上传发布（B站 / 小红书 / 抖音 / YouTube），不做剪辑 |
+| ponytail | 懒惰高级开发模式：用最小且完整的改动解决问题，回复一读就懂；档位 lite/full/ultra |
 | project-map | 用户全部代码项目分布、远程仓库与 Mac 本地仓库对照，以及改代码/合并/推送流程 |
 | video-production | 从选题、脚本、剪辑、导出到封面的视频制作，不负责发布 |
