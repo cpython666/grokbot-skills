@@ -18,17 +18,23 @@ description: >-
 ## 重点项目速查
 - 个人网站「星梦启航」：cpython666/cpython666.github.io（master），本地 ~/git_pro/cpython666.github.io，线上 https://cpython666.github.io/ ，工具页在 /tools/<工具名>/（如 /tools/markdown-image/）。
 - 组织主页「星梦科技」：StarDreamTech/StarDreamTech.github.io（main），线上 https://stardreamtech.github.io/ 。Mac 本地尚未克隆。
-- 星笺 Starclip（Rust 剪贴板）：StarDreamTech/starclip（cpython666/starclip 为 fork）；Homebrew 源 StarDreamTech/homebrew-tap，安装 `brew install --cask stardreamtech/tap/starclip`。
-- 星镜 Starshot（截图工具）：StarDreamTech/starshot（cpython666/starshot 为 fork）。
-- 星匣 StarVault（AI 对话档案）：StarDreamTech/starvault（cpython666/starvault 为 fork）。
+- 星笺 Starclip（Rust 剪贴板）：StarDreamTech/StarClip（cpython666/starclip 为 fork）；Homebrew 源 StarDreamTech/homebrew-tap，安装 `brew install --cask stardreamtech/tap/starclip`。
+- 星镜 Starshot（截图工具）：StarDreamTech/StarShot（cpython666/starshot 为 fork）。
+- 星匣 StarVault（AI 对话档案）：StarDreamTech/StarVault（cpython666/starvault 为 fork）。
 - 星哨 StarWatch：StarDreamTech/StarWatch（筹备中；cpython666/StarWatch 为 fork）。
-- 星搭子 starbuddy（2026-11-11 起公开，第 0 期，本地未发现）：StarDreamTech/starbuddy。组织禁用私有 fork，cpython666 下没有副本。
+- 星搭子 starbuddy（2026-11-11 起公开，第 0 期，本地未发现）：StarDreamTech/StarBuddy。组织禁用私有 fork，cpython666 下没有副本。
 - 星相 StarPersona（公开，2026-11-11 新建，只有 README）：StarDreamTech/StarPersona，指纹浏览器 / 多账号环境管理器，第一期用现成内核（Camoufox 或魔改 Chromium）只做外层管理器，Windows + macOS。
 - 星盘 StarDash（公开，2026-11-11 新建，只有 README）：StarDreamTech/StarDash，对标 CalmBar（chao-eng/CalmBar）的跨平台菜单栏/托盘状态面板，计划 Tauri，动态 SVG 图标 + 多主题。
 - Grok Bot 共享技能库：cpython666/grokbot-skills（每晚同步到 Mac）。
 - 内容仓库：WechatPilot（公众号）、VideoPilot（视频）、xingxiang（星象视频技能）。
 - 运维：ai-server-ops（私有）；电脑助手 my-computer-assistant（每台电脑一个分支）。
 - 其他 StarDreamTech 组织仓库：StarScout、sd-spider-utils、sd_ctx、starscout-skill。
+
+## 2026-11-17 仓库大小写调整
+- 组织产品仓已规范为 StarClip、StarShot、StarVault、StarBuddy、StarLock、StarPort、StarGate、StarRoster；个人 fork、安装包名、Cask 和安装命令不变。
+- Mac 已改目录：`~/git_pro/StarBuddy`、`~/git_pro/StarShot`，origin 同步大驼峰。
+- Mac 暂保留旧目录：`starvault`（合并冲突）、`starport`（运行中进程）、`stargate` / `starlock` / `starclip`（多 worktree）；`starroster` 无本地目录。后续先实时核对，不能仅凭远程名推断本地目录名。
+- 下方历史盘点保留当时目录和分支，不能当作当前状态。
 
 ## 本地仓库对照表（2026-11-01 盘点，按最近推送排序）
 | 本地目录 (~/git_pro/) | 当前分支 | 远程仓库 | 最近推送 | 说明 |
@@ -139,7 +145,7 @@ description: >-
 | 远程仓库 | 默认分支 | 最近推送 | 可见性 | 说明 |
 |---|---|---|---|---|
 | StarDreamTech/StarDreamTech.github.io | main | 2026-11-11 | 公开 | 星梦科技组织主页，GitHub Pages 发布到 https://stardreamtech.github.io/ |
-| StarDreamTech/starbuddy | main | 2026-10-31 | 公开（11-11 起） | 星搭子：常驻桌面的星芽个人电脑助手（已转到组织；第 0 期，公开前不要上组织主页） |
+| StarDreamTech/StarBuddy | main | 2026-10-31 | 公开（11-11 起） | 星搭子：常驻桌面的星芽个人电脑助手（已转到组织；第 0 期，公开前不要上组织主页） |
 | StarDreamTech/StarPersona | main | 2026-11-11 | 公开 | 星相：指纹浏览器 / 多账号环境管理器（新建） |
 | StarDreamTech/StarDash | main | 2026-11-11 | 公开 | 星盘：跨平台菜单栏/托盘状态面板（新建，对标 CalmBar） |
 | cpython666/lemo-opuscar | main | 2026-10-22 | 公开 | A toolbox of film styles made in code fo |
